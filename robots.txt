@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUZTRANSFER — Traslados Premium</title>
+<meta name="description" content="GUZTRANSFER ofrece traslados premium y servicios de transporte privado en República Dominicana. Reserva tu traslado cómodo, puntual y seguro al mejor precio.">
+<meta name="robots" content="index, follow">
+<!-- Favicon para todos los dispositivos -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.jpg">
+<meta name="msapplication-TileImage" content="assets/favicon.jpg">
+<meta property="og:title" content="GUZTRANSFER — Traslados Premium">
+<meta property="og:description" content="Traslados premium y transporte privado en República Dominicana. Cómodo, puntual y seguro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guztransfer.com/">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap"></noscript>
+<style>
+  :root {
+    --black: #080e1f;
+    --white: #f4f7fc;
+    --blue-dark: #0d2461;
+    --blue-mid: #1a4ba0;
+    --blue-accent: #3a7bd5;
+    --blue-light: #6aaee8;
+    --gray: #7a8aaa;
+    --gray-light: #dce4f0;
+    --card-bg: #ffffff;
+    --section-alt: #eef2f9;
+    /* legacy aliases so old references still work */
+    --gold: #3a7bd5;
+    --gold-light: #6aaee8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: rgba(244,247,252,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,75,160,0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 700;
+    letter-spacing: 0.12em; color: var(--blue-dark); text-decoration: none;
+  }
+  .nav-logo span { color: var(--blue-accent); }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links li { display: flex; align-items: center; }
+  .nav-links a {
+    text-decoration: none; font-size: 0.82rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--black); font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue-accent); }
+  .nav-cta {
+    background: var(--blue-dark); color: #fff !important;
+    padding: 0.55rem 1.4rem; border-radius: 2px; font-weight: 500 !important;
+  }
+  .nav-cta:hover { background: var(--blue-mid) !important; color: #fff !important; }
+
+  /* GLASS WHATSAPP BUTTON */
+  .nav-links li:has(.nav-whatsapp-btn) { list-style: none; }
+
+  .nav-whatsapp-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none !important;
+    padding: 0.42rem 0.75rem 0.42rem 0.42rem;
+    border-radius: 14px;
+    background: rgba(160, 180, 210, 0.22) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(160, 180, 215, 0.4) !important;
+    box-shadow: 0 2px 12px rgba(80, 110, 160, 0.1), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    color: var(--blue-dark) !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+  }
+  .nav-whatsapp-btn:hover {
+    background: rgba(140, 165, 200, 0.35) !important;
+    box-shadow: 0 4px 20px rgba(80, 110, 160, 0.18), inset 0 1px 0 rgba(255,255,255,0.45);
+    transform: translateY(-1px);
+    color: var(--blue-dark) !important;
+  }
+  .nav-wa-icon {
+    width: 32px; height: 32px;
+    background: rgba(90, 115, 160, 0.25);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .nav-wa-icon svg {
+    width: 17px; height: 17px;
+    fill: var(--blue-dark);
+  }
+  .nav-wa-text {
+    display: flex; flex-direction: column; line-height: 1.2;
+  }
+  .nav-wa-title {
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--blue-dark); white-space: nowrap;
+    letter-spacing: 0.01em; text-transform: none;
+  }
+  .nav-wa-sub {
+    font-size: 0.68rem; color: var(--gray);
+    font-weight: 400; letter-spacing: 0.03em;
+  }
+  .nav-wa-arrow {
+    font-size: 1.15rem; font-weight: 300;
+    color: var(--blue-dark); opacity: 0.65;
+    margin-left: 0.05rem; line-height: 1;
+  }
+  @media (max-width: 768px) {
+    .nav-whatsapp-btn { display: none !important; }
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 0;
+    background-image: url('assets/hero-bg.png');    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(
+      to right,
+      rgba(8, 14, 31, 0.92) 0%,
+      rgba(13, 36, 97, 0.78) 48%,
+      rgba(13, 36, 97, 0.08) 100%
+    );
+  }
+
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 10rem 5% 6rem 7%; z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--blue-light); font-weight: 500; margin-bottom: 1.5rem;
+  }
+  .hero-badge::before {
+    content: ''; display: inline-block; width: 28px; height: 1px; background: var(--blue-light);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 5vw, 5.5rem); font-weight: 600;
+    line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 1.8rem;
+    color: #ffffff;
+  }
+  .hero h1 em { font-style: italic; color: var(--blue-light); }
+
+  .hero-desc {
+    font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.78);
+    max-width: 400px; margin-bottom: 2.8rem;
+  }
+
+  .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--blue-dark); color: #ffffff;
+    padding: 0.9rem 2.2rem; border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    display: inline-block; transition: all 0.25s; border-radius: 2px;
+  }
+  .btn-primary:hover { background: var(--blue-mid); color: #fff; transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent; color: #ffffff;
+    padding: 0.9rem 2.2rem; border: 1.5px solid rgba(106,174,232,0.6);
+    cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    display: inline-block; transition: all 0.25s; border-radius: 2px;
+  }
+  .btn-outline:hover { border-color: var(--blue-light); color: var(--blue-light); transform: translateY(-2px); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.2rem;
+    font-weight: 700; color: var(--gold); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(255,255,255,0.55); margin-top: 0.3rem;
+  }
+
+  .hero-right { position: relative; z-index: 2; }
+  .hero-overlay-text {
+    position: absolute; bottom: 2.5rem; left: 2rem; right: 2rem; z-index: 2;
+    color: rgba(255,255,255,0.5); font-size: 0.72rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .gold-bar { display: none; }
+
+  /* SERVICES */
+  .services { padding: 8rem 7%; background: var(--white); }
+
+  .section-header { text-align: center; margin-bottom: 5rem; }
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--blue-accent); font-weight: 500; display: block; margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.8rem); font-weight: 600; line-height: 1.1;
+  }
+  .section-title em { font-style: italic; color: var(--blue-accent); }
+
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+  .service-card {
+    background: var(--card-bg); padding: 3rem 2.5rem;
+    border: 1px solid var(--gray-light); transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 3px; background: var(--blue-accent);
+    transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
+  }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+
+  .service-icon { font-size: 2.2rem; margin-bottom: 1.5rem; }
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+    font-weight: 600; margin-bottom: 0.8rem;
+  }
+  .service-card p { font-size: 0.88rem; line-height: 1.75; color: #666; }
+
+  .service-features {
+    margin-top: 1.5rem; list-style: none;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .service-features li {
+    font-size: 0.8rem; color: #777; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .service-features li::before { content: '—'; color: var(--blue-accent); font-weight: 700; }
+
+  /* PRICING */
+  .pricing { padding: 8rem 7%; background: var(--section-alt); }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+  .pricing-card {
+    background: var(--card-bg); padding: 3rem 2.5rem;
+    border: 1px solid var(--gray-light); transition: all 0.3s; position: relative;
+  }
+  .pricing-card.featured {
+    background: var(--blue-dark); color: var(--white);
+    transform: scale(1.03); border-color: var(--blue-accent);
+  }
+
+  .pricing-badge {
+    position: absolute; top: -1px; right: 2rem;
+    background: var(--blue-accent); color: #fff;
+    font-size: 0.68rem; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 600; padding: 0.3rem 0.8rem;
+  }
+
+  .pricing-card h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.6rem;
+    font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .pricing-card.featured h3 { color: var(--white); }
+
+  .pricing-subtitle {
+    font-size: 0.8rem; color: var(--gray); margin-bottom: 2rem;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .pricing-card.featured .pricing-subtitle { color: rgba(255,255,255,0.5); }
+
+  .price {
+    font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+    font-weight: 700; color: var(--blue-accent); line-height: 1;
+  }
+  .price sup { font-size: 1.2rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; }
+
+  .price-note {
+    font-size: 0.75rem; color: var(--gray); margin-top: 0.3rem; margin-bottom: 2rem;
+  }
+  .pricing-card.featured .price-note { color: rgba(255,255,255,0.4); }
+
+  .pricing-features {
+    list-style: none; display: flex; flex-direction: column;
+    gap: 0.8rem; margin-bottom: 2.5rem;
+  }
+  .pricing-features li {
+    font-size: 0.85rem; display: flex; align-items: center; gap: 0.6rem; color: #555;
+  }
+  .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.75); }
+  .pricing-features li span.check { color: var(--blue-accent); font-size: 1rem; line-height: 1; }
+
+  .btn-pricing-dark {
+    display: block; text-align: center; background: var(--blue-accent); color: #fff;
+    padding: 0.85rem; text-decoration: none; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;
+    transition: all 0.25s; border-radius: 2px;
+  }
+  .btn-pricing-dark:hover { background: var(--blue-light); color: var(--blue-dark); transform: translateY(-2px); }
+
+  .btn-pricing-outline {
+    display: block; text-align: center; background: transparent; color: var(--black);
+    padding: 0.85rem; border: 1.5px solid var(--gray-light); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    transition: all 0.25s; border-radius: 2px;
+  }
+  .btn-pricing-outline:hover { border-color: var(--blue-accent); color: var(--blue-accent); }
+
+  /* CONTACT */
+  .contact {
+    padding: 8rem 7%; background: var(--white);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;
+  }
+
+  .contact-info h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 600;
+    line-height: 1.1; margin-bottom: 1.5rem;
+  }
+  .contact-info h2 em { font-style: italic; color: var(--blue-accent); }
+
+  .contact-desc {
+    font-size: 0.95rem; line-height: 1.75; color: #666; margin-bottom: 3rem;
+  }
+
+  .contact-details { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+
+  .contact-item-icon {
+    width: 42px; height: 42px; background: #dde8f5;
+    border: 1px solid var(--gray-light); display: flex; align-items: center;
+    justify-content: center; font-size: 1.1rem; flex-shrink: 0; border-radius: 2px; color: var(--blue-dark);
+  }
+
+  .contact-item-text h4 {
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--gray); margin-bottom: 0.2rem;
+  }
+  .contact-item-text p { font-size: 0.95rem; color: var(--black); font-weight: 500; }
+
+  /* FORM */
+  .contact-form { background: var(--section-alt); padding: 3rem; border: 1px solid var(--gray-light); }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;
+    font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .form-subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 2rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+  .form-group label {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #666; font-weight: 500;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem 1rem; border: 1px solid var(--gray-light);
+    background: var(--white); font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem; color: var(--black); outline: none;
+    transition: border-color 0.2s; border-radius: 2px; appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue-accent); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .btn-submit {
+    width: 100%; background: var(--blue-dark); color: var(--white);
+    padding: 1rem; border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    transition: all 0.25s; border-radius: 2px;
+  }
+  .btn-submit:hover { background: var(--blue-mid); color: #fff; }
+
+  /* FOOTER */
+  footer {
+    background: var(--blue-dark); color: rgba(255,255,255,0.6);
+    padding: 3rem 7%; display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+    font-weight: 700; letter-spacing: 0.1em; color: var(--white); text-decoration: none;
+  }
+  .footer-logo span { color: var(--blue-light); }
+  footer p { font-size: 0.78rem; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a {
+    text-decoration: none; color: rgba(255,255,255,0.8);
+    font-size: 0.78rem; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--blue-light); }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+
+  /* PAYMENT BAR */
+  .payment-bar {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 5%;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.4s ease 0.2s forwards;
+  }
+
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .payment-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 1.8rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(32px) saturate(160%) brightness(1.1);
+    -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(1.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+    border-right-color: rgba(255, 255, 255, 0.07);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.45),
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .payment-bar-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 400;
+  }
+
+  .payment-divider {
+    width: 1px;
+    height: 24px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.28), transparent);
+    flex-shrink: 0;
+  }
+
+  .payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .payment-icon {
+    width: 46px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  .payment-icon:hover {
+    transform: translateY(-2px) scale(1.06);
+  }
+
+  .payment-icon svg {
+    width: 88%;
+    height: 88%;
+  }
+
+  /* Visa */
+  .payment-icon.visa {
+    background: rgba(26, 31, 113, 0.75);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .payment-icon.visa:hover { background: rgba(26, 31, 113, 0.92); }
+
+  /* Mastercard */
+  .payment-icon.mc {
+    background: rgba(18, 18, 18, 0.65);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .payment-icon.mc:hover { background: rgba(18, 18, 18, 0.85); }
+
+  /* PayPal */
+  .payment-icon.paypal {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .payment-icon.paypal:hover { background: rgba(255, 255, 255, 1); }
+
+  @media (max-width: 900px) {
+    .payment-bar {
+      bottom: 1.5rem;
+      right: 50%;
+      left: auto;
+      opacity: 0;
+      transform: translateX(50%) translateY(20px);
+      animation: fadeSlideUpCentered 0.4s ease 0.2s forwards;
+    }
+    @keyframes fadeSlideUpCentered {
+      to {
+        opacity: 1;
+        transform: translateX(50%) translateY(0);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .payment-bar {
+      bottom: 0.5rem;
+      right: 50%;
+      left: auto;
+      opacity: 0;
+      transform: translateX(50%) translateY(20px);
+      animation: fadeSlideUpCentered 0.4s ease 0.2s forwards;
+    }
+    .payment-bar-inner {
+     .payment-bar-inner {
+      padding: 0.22rem 0.45rem;
+      gap: 0.28rem;
+      border-radius: 10px;
+    }
+    .payment-bar-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.03em;
+    }
+    .payment-divider {
+      height: 10px;
+    }
+    .payment-icons {
+      gap: 0.22rem;
+    }
+    .payment-icon {
+      width: 30px;
+      height: 20px;
+      border-radius: 3px;
+    }
+    }
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px; z-index: 101;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--blue-dark); border-radius: 2px; transition: all 0.3s;
+  }
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
+  .mobile-menu { display: none; }
+  @media (max-width: 600px) {
+    .mobile-menu { display: flex; }
+  }
+
+  /* ── TABLET ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { display: none; }
+    .hero-left { padding: 9rem 6% 5rem; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-card.featured { transform: none; }
+    .contact { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr 1fr; }
+    nav { padding: 1rem 4%; }
+    .nav-links { display: none; }
+    .nav-mobile-cta { display: flex; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 600px) {
+    /* NAV */
+    nav { padding: 1rem 5%; }
+    .nav-logo { font-size: 1.25rem; }
+    .nav-links { display: none; }
+    .nav-mobile-cta { display: flex; }
+    .hamburger { display: flex; }
+
+    /* MOBILE MENU */
+    .mobile-menu {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--blue-dark); z-index: 200;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2.5rem;
+      transform: translateX(100%); transition: transform 0.35s ease;
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem; font-weight: 500; color: #fff;
+      text-decoration: none; letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .mobile-menu a:hover { color: var(--blue-light); }
+    .mobile-menu .close-btn {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: none; border: none; color: #fff;
+      font-size: 2rem; cursor: pointer; line-height: 1;
+    }
+    .mobile-menu .menu-cta {
+      background: transparent; color: #fff !important;
+      padding: 0.8rem 2.5rem; border-radius: 2px;
+      border: 1.5px solid rgba(106,174,232,0.6);
+      font-size: 1.1rem !important; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 500 !important;
+      margin-top: 0.5rem;
+    }
+    .mobile-menu .menu-cta:hover {
+      border-color: var(--blue-light); color: var(--blue-light) !important;
+    }
+
+    /* HERO */
+    .hero { min-height: 100svh; }
+    .hero-left {
+      padding: 7rem 5% 4rem;
+      text-align: center; align-items: center;
+    }
+    .hero-badge { justify-content: center; }
+    .hero h1 { font-size: clamp(2.6rem, 10vw, 3.8rem); }
+    .hero-desc { font-size: 0.92rem; text-align: center; }
+    .hero-buttons { justify-content: center; flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; text-align: center; }
+    .hero-stats { justify-content: center; gap: 1.8rem; flex-wrap: wrap; }
+    .stat-number { font-size: 1.8rem; }
+
+    /* PRICING */
+    .pricing { padding: 5rem 5%; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .pricing-card { padding: 2rem 1.8rem; }
+    .pricing-card.featured { transform: none; border-left: 4px solid var(--blue-accent); }
+    .price { font-size: 2.5rem; }
+
+    /* CONTACT */
+    .contact { padding: 5rem 5%; gap: 2.5rem; }
+    .contact-form { padding: 2rem 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-info h2 { font-size: 2.2rem; }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column; text-align: center;
+      padding: 2.5rem 5%; gap: 1.2rem;
+    }
+    .footer-links { justify-content: center; flex-wrap: wrap; gap: 1.2rem; }
+
+    /* SECTION HEADERS */
+    .section-header { margin-bottom: 3rem; }
+    .section-title { font-size: 2.2rem; }
+    .services { padding: 5rem 5%; }
+  }
+  /* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 999;
+  text-decoration: none;
+  animation: fadeSlideUp 0.4s ease 0.6s both;
+}
+
+.whatsapp-float-btn {
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+}
+
+.whatsapp-float-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 4.5rem;
+    right: 1rem;
+  }
+  .whatsapp-float-btn {
+    width: 42px;
+    height: 42px;
+    box-shadow: 0 3px 14px rgba(37,211,102,0.4);
+  }
+  .whatsapp-float-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+  .contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  margin-bottom: 0.2rem;
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "GUZTRANSFER",
+  "description": "Servicio de traslados premium en República Dominicana. Aeropuertos, hoteles, tours y corporativos.",
+  "url": "https://guztransfer.com",
+  "telephone": "+18298634734",
+  "email": "info@guztransfer.com",
+  "image": "https://guztransfer.com/assets/hero-bg.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "DO",
+    "addressRegion": "Santo Domingo"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.4861",
+    "longitude": "-69.9312"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://wa.me/18298634734"
+  ],
+  "serviceArea": {
+    "@type": "Country",
+    "name": "República Dominicana"
+  }
+}
+</script>
+  
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">GUZ<span>TRANSFER</span></a>
+  <ul class="nav-links">
+    <li><a href="#tarifas">Tarifas</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li>
+      <a href="https://wa.me/18298634734" target="_blank" class="nav-whatsapp-btn">
+        <span class="nav-wa-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+        </span>
+        <span class="nav-wa-text">
+          <span class="nav-wa-title">Reservar ahora</span>
+          <span class="nav-wa-sub">WhatsApp</span>
+        </span>
+        <span class="nav-wa-arrow">›</span>
+      </a>
+    </li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="#tarifas" onclick="toggleMenu()">Tarifas</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  <a href="#cotizacion" class="menu-cta" onclick="toggleMenu()">Reservar ahora</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Traslados Ejecutivos Premium</div>
+    <h1>Tu destino,<br>con <em>elegancia</em><br>y puntualidad.</h1>
+    <p class="hero-desc">Servicio de transfers profesional para aeropuertos, hoteles, tours y corporativos. Conductores certificados, flota moderna y disponibilidad 24/7.</p>
+    <div class="hero-buttons">
+      <a href="#cotizacion" class="btn-primary">Reservar traslado</a>
+      <a href="#tarifas" class="btn-outline">Ver tarifas</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">5K+</div>
+        <div class="stat-label">Traslados realizados</div>
+      </div>
+      <div>
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Satisfacción</div>
+      </div>
+      <div>
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Disponibilidad</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right"></div>
+
+  <!-- PAYMENT BAR -->
+  <div class="payment-bar">
+    <div class="payment-bar-inner">
+      <span class="payment-bar-label">Pagos seguros&nbsp;•&nbsp;Rápido y sin complicaciones</span>
+      <div class="payment-divider"></div>
+      <div class="payment-icons">
+
+        <!-- Visa -->
+        <div class="payment-icon visa" title="Visa">
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="63%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-weight="900" font-size="9.5" letter-spacing="1">VISA</text>
+          </svg>
+        </div>
+
+        <!-- Mastercard -->
+        <div class="payment-icon mc" title="Mastercard">
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="12" r="7" fill="#EB001B"/>
+            <circle cx="24" cy="12" r="7" fill="#F79E1B"/>
+            <path d="M19 6.27a7 7 0 0 1 0 11.46A7 7 0 0 1 19 6.27z" fill="#FF5F00"/>
+          </svg>
+        </div>
+
+        <!-- PayPal 2024 -->
+        <div class="payment-icon paypal" title="PayPal">
+          <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.2 5.2h4.3c1.15 0 2 0.28 2.55 0.85 0.55 0.57 0.72 1.42 0.52 2.55 -0.28 1.72 -1.42 2.82 -3.25 3.05l-0.45 0.05h-1.65l-0.72 4.1H12Z" fill="#003087"/>
+            <path d="M14.85 10.05h1.25c0.88 0 1.5-0.42 1.65-1.35 0.08-0.52 0-0.9-0.25-1.15-0.25-0.25-0.65-0.38-1.2-0.38h-0.95Z" fill="#003087"/>
+            <path d="M16.8 7.2h4.3c1.15 0 2 0.28 2.55 0.85 0.55 0.57 0.72 1.42 0.52 2.55 -0.28 1.72 -1.42 2.82 -3.25 3.05l-0.45 0.05h-1.65l-0.72 4.1H15.6Z" fill="#009CDE"/>
+            <path d="M18.45 12.05h1.25c0.88 0 1.5-0.42 1.65-1.35 0.08-0.52 0-0.9-0.25-1.15-0.25-0.25-0.65-0.38-1.2-0.38h-0.95Z" fill="#009CDE"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<main>
+<!-- PRICING -->
+<section class="pricing" id="tarifas">
+  <div class="section-header fade-up">
+    <span class="section-label">Tarifas claras</span>
+    <h2 class="section-title">Precios <em>transparentes</em><br>sin sorpresas</h2>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card fade-up">
+      <h3>Santo Domingo</h3>
+      <p class="pricing-subtitle">Traslados urbanos y aeropuerto SDQ</p>
+      <div class="price"><sup>$</sup>40</div>
+      <p class="price-note">desde · USD por viaje</p>
+      <ul class="pricing-features">
+        <li><span class="check">✦</span> Recogida en aeropuerto SDQ</li>
+        <li><span class="check">✦</span> Transporte privado</li>
+        <li><span class="check">✦</span> 1–3 pasajeros</li>
+        <li><span class="check">✦</span> Conductor profesional</li>
+        <li><span class="check">✦</span> A/C, WiFi y agua</li>
+        <li><span class="check">✦</span> Conductor bilingüe</li>
+      </ul>
+      <a href="#cotizacion" class="btn-pricing-outline">Reservar</a>
+    </div>
+    <div class="pricing-card featured fade-up">
+      <div class="pricing-badge">Más popular</div>
+      <h3>Punta Cana</h3>
+      <p class="pricing-subtitle">Traslado Santo Domingo ↔ Punta Cana</p>
+      <div class="price"><sup>$</sup>130</div>
+      <p class="price-note">desde · USD por viaje</p>
+      <ul class="pricing-features">
+        <li><span class="check">✦</span> Servicio puerta a puerta</li>
+        <li><span class="check">✦</span> Vehículo cómodo y climatizado</li>
+        <li><span class="check">✦</span> 1–3 pasajeros</li>
+        <li><span class="check">✦</span> Servicio premium</li>
+        <li><span class="check">✦</span> A/C, WiFi y agua</li>
+        <li><span class="check">✦</span> Conductor bilingüe</li>
+      </ul>
+      <a href="#cotizacion" class="btn-pricing-dark">Reservar ahora</a>
+    </div>
+    <div class="pricing-card fade-up">
+      <h3>Santiago</h3>
+      <p class="pricing-subtitle">Traslado Santo Domingo ↔ Santiago</p>
+      <div class="price"><sup>$</sup>100</div>
+      <p class="price-note">desde · USD por viaje</p>
+      <ul class="pricing-features">
+        <li><span class="check">✦</span> Conductor profesional</li>
+        <li><span class="check">✦</span> Transporte seguro</li>
+        <li><span class="check">✦</span> 1–3 pasajeros</li>
+        <li><span class="check">✦</span> Ruta personalizada</li>
+        <li><span class="check">✦</span> A/C, WiFi y agua</li>
+        <li><span class="check">✦</span> Conductor bilingüe</li>
+      </ul>
+      <a href="#cotizacion" class="btn-pricing-outline">Reservar</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="contact-info fade-up">
+    <span class="section-label">Contacto y reservas</span>
+    <h2>Listo para llevarte<br>a tu <em>destino</em></h2>
+    <p class="contact-desc">Contáctanos por cualquier medio y nos aseguramos de brindarte el mejor servicio de traslado. Respondemos en menos de 30 minutos.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-item-icon">📱</div>
+        <div class="contact-item-text">
+          <p class="contact-label">WhatsApp / Teléfono</p>
+          <p><a href="https://wa.me/18298634734" target="_blank" style="color:var(--blue-dark);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;">+1 (829) 863-4734 <span style="background:#25D366;color:#fff;font-size:0.7rem;padding:0.15rem 0.5rem;border-radius:20px;letter-spacing:0.05em;">WhatsApp</span></a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div class="contact-item-text">
+          <p class="contact-label">Correo electrónico</p>
+          <p>info@guztransfer.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <p class="contact-label">Área de servicio</p>
+          <p>República Dominicana · Nacional</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🕐</div>
+        <div class="contact-item-text">
+          <p class="contact-label">Disponibilidad</p>
+          <p>24 horas / 7 días a la semana</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form fade-up" id="cotizacion">
+    <h3 class="form-title">Solicitar cotización</h3>
+    <p class="form-subtitle">Completa el formulario y te contactamos de inmediato</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <label>Teléfono / WhatsApp</label>
+        <input type="tel" placeholder="+1 (829) 863-4734">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="servicio">Tipo de servicio</label>
+      <select id="servicio">
+        <option value="">Selecciona un servicio</option>
+        <option>Traslado Aeropuerto → Hotel</option>
+        <option>Traslado Hotel → Aeropuerto</option>
+        <option>Servicio Corporativo / Ejecutivo</option>
+        <option>Tour y Excursión Privada</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fecha">Fecha del servicio</label>
+        <input type="date" id="fecha">
+      </div>
+      <div class="form-group">
+        <label>Número de pasajeros</label>
+        <input type="number" placeholder="1" min="1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Detalles adicionales</label>
+      <textarea placeholder="Vuelo, destino, instrucciones especiales..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="enviarWhatsApp()">Enviar solicitud →</button>
+  </div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+  <!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/18298634734" target="_blank" aria-label="Contactar por WhatsApp">
+  <div class="whatsapp-float-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </div>
+</a>
+  <a href="#" class="footer-logo">GUZ<span>TRANSFER</span></a>
+  <p>© 2025 GUZTRANSFER. Todos los derechos reservados.</p>
+  <ul class="footer-links">
+    <li><a href="#tarifas">Tarifas</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 120);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+<script>
+function enviarWhatsApp() {
+  const nombre    = document.querySelector('input[placeholder="Tu nombre"]').value.trim();
+  const telefono  = document.querySelector('input[type="tel"]').value.trim();
+  const servicio  = document.querySelector('select').value;
+  const fecha     = document.querySelector('input[type="date"]').value;
+  const pasajeros = document.querySelector('input[type="number"]').value;
+  const detalles  = document.querySelector('textarea').value.trim();
+
+  if (!nombre || !servicio) {
+    alert('Por favor completa al menos tu nombre y el tipo de servicio.');
+    return;
+  }
+
+  const msg =
+    `🚗 *Nueva Solicitud — GUZTRANSFER*
+
+` +
+    `👤 *Nombre:* ${nombre}
+` +
+    `📱 *Teléfono:* ${telefono || 'No indicado'}
+` +
+    `🗺️ *Servicio:* ${servicio}
+` +
+    `📅 *Fecha:* ${fecha || 'No indicada'}
+` +
+    `👥 *Pasajeros:* ${pasajeros || 'No indicado'}
+` +
+    `📝 *Detalles:* ${detalles || 'Ninguno'}
+
+` +
+    `_Enviado desde guztransfer.com_`;
+
+  const url = `https://wa.me/18298634734?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+</script>
+</body>
+</html>
